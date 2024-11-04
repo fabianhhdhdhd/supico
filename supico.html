@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUPICO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> <!-- Dodanie nowej czcionki -->
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #f0f4f8 0%, #e3e9ef 100%); /* Delikatny gradient */
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            text-align: center;
+            padding: 20px; /* Padding dla lepszego odstępu */
+        }
+        a {
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        img {
+            max-width: 250px; /* Ograniczamy maksymalną szerokość logo */
+            height: auto;
+            border-radius: 20px; /* Większe zaokrąglenie rogów */
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Subtelniejszy cień */
+            animation: pulse 2s infinite; /* Animacja pulsowania */
+        }
+        a:hover {
+            transform: scale(1.05); /* Powiększenie przy najeździe */
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2); /* Intensyfikacja cienia przy najeździe */
+        }
+        .description {
+            margin-top: 20px; /* Odstęp od logo */
+            font-size: 1.4em; /* Powiększenie czcionki */
+            font-weight: 400; /* Normalna waga */
+            color: #555; /* Stonowany kolor tekstu */
+            opacity: 0.9; /* Lekka przezroczystość */
+            transition: color 0.3s;
+        }
+        .description:hover {
+            color: #007bff; /* Zmiana koloru tekstu po najeździe */
+        }
+        .cta-button {
+            margin-top: 30px; /* Odstęp od opisu */
+            padding: 15px 25px; /* Padding dla przycisku */
+            background-color: #007bff; /* Kolor tła przycisku */
+            color: white; /* Kolor tekstu przycisku */
+            border: none; /* Bez obramowania */
+            border-radius: 5px; /* Zaokrąglone rogi przycisku */
+            font-size: 1.2em; /* Powiększenie czcionki przycisku */
+            cursor: pointer; /* Zmiana kursora */
+            transition: background-color 0.3s, transform 0.3s; /* Animacja dla przycisku */
+        }
+        .cta-button:hover {
+            background-color: #0056b3; /* Ciemniejszy odcień przy najeździe */
+            transform: scale(1.05); /* Powiększenie przy najeździe */
+        }
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://www.supico.pl" target="_blank">
+        <img src="supico-logo.png" alt="Logo Firmy">
+    </a>
+    <div class="description">Odwiedź naszą stronę, aby dowiedzieć się więcej!</div>
+    <button class="cta-button" onclick="window.open('https://www.supico.pl', '_blank')">Zobacz więcej</button> <!-- Przyciski CTA -->
+
+</body>
+</html>
